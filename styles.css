@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    width:  1000px;
+    height: 700px;
+    background-image: url('img/back.jpg');
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: moveBackground 100s linear infinite;
+    border: 1px solid #181818;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 0;
+    }
+}
+#block {
+    width: 60px;
+    height: 600px;
+    background-color: rgb(156, 156, 156);
+    position: absolute;
+    left: 400px;
+    animation: block 3s infinite linear;
+    border-radius: 10px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes block {
+    0% { left: 400px;}
+    100% {left: -50px; }
+}
+
+#hole {
+    width: 50px;
+    height: 150px;
+    position: absolute; 
+    background-color: white;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+
+#character {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 100px;
+}
